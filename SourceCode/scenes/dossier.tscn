@@ -100,4 +100,4 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_2yg7h")
-text = "Sborra"
+text = "Ignora"
