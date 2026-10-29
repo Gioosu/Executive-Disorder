@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://cvsff3qovbonn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v8gwe"]
+bg_color = Color(0.9098039, 0.8627451, 0.7607843, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5794584, 0.2362521, 0.006487448, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 14
+anti_aliasing_size = 0.715
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mp7f8"]
+bg_color = Color(0.2981068, 0.62736404, 0.89121115, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0038943554, 0.37923974, 0.7310889, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2yg7h"]
+bg_color = Color(1, 0.32970032, 0.37258232, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.7224715, 0, 0.22855335, 1)
+border_blend = true
+
+[node name="Dossier" type="Control" unique_id=230350892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1332.0
+offset_bottom = -535.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Foglio" type="Panel" parent="." unique_id=1449098122]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v8gwe")
+
+[node name="Margini" type="MarginContainer" parent="Foglio" unique_id=398037520]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="Contenuti" type="VBoxContainer" parent="Foglio/Margini" unique_id=697215666]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Title" type="Label" parent="Foglio/Margini/Contenuti" unique_id=906400684]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_font_sizes/font_size = 28
+text = "EMERGENZA IDRICA"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="Foglio/Margini/Contenuti" unique_id=415155598]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="Foglio/Margini/Contenuti" unique_id=619615514]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
+theme_override_font_sizes/font_size = 22
+text = "La siccità colpisce tre aziende. Il CEO di TXT chiede fondi per riparare i distributori dell'acqua"
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Foglio/Margini/Contenuti" unique_id=1095350206]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Foglio/Margini/Contenuti/HBoxContainer" unique_id=1076322619]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_mp7f8")
+text = "Finanzia i lavori"
+
+[node name="Button2" type="Button" parent="Foglio/Margini/Contenuti/HBoxContainer" unique_id=640860958]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_2yg7h")
+text = "Sborra"

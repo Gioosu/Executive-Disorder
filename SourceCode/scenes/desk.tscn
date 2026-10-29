@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cy4d37s8baqsv"]
+
+[ext_resource type="Texture2D" uid="uid://bakd0t5hsdpqy" path="res://assets/Panorama.png" id="1_e7kfv"]
+[ext_resource type="Texture2D" uid="uid://c6xr08e8mhthx" path="res://assets/Background.png" id="2_8atfi"]
+[ext_resource type="Texture2D" uid="uid://du6y5yji6efvk" path="res://assets/Desk.png" id="3_vxfw4"]
+[ext_resource type="Texture2D" uid="uid://14km2plx4v2y" path="res://assets/TheRedButton.png" id="4_8atfi"]
+[ext_resource type="Script" uid="uid://dx8t3b8jem5ss" path="res://scenes/the_big_button.gd" id="5_vxfw4"]
+[ext_resource type="PackedScene" uid="uid://cvsff3qovbonn" path="res://scenes/dossier.tscn" id="6_sista"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_muqb5"]
+bg_color = Color(0.004019165, 0.004019165, 0.004019165, 0.56078434)
+
+[node name="MainRoom" type="Control" unique_id=357193325]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panorama" type="TextureRect" parent="." unique_id=1573872000]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_e7kfv")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Background" type="TextureRect" parent="." unique_id=413093483]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_8atfi")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Desk" type="TextureRect" parent="." unique_id=1119527381]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 158.0
+offset_right = 1838.0
+offset_bottom = 1125.0
+mouse_filter = 2
+texture = ExtResource("3_vxfw4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TheBigButton" type="TextureButton" parent="." unique_id=1471550404 node_paths=PackedStringArray("console")]
+layout_mode = 0
+offset_left = 1341.0
+offset_top = 464.0
+offset_right = 1591.0
+offset_bottom = 714.0
+texture_normal = ExtResource("4_8atfi")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_vxfw4")
+console = NodePath("../Console")
+
+[node name="Console" type="RichTextLabel" parent="." unique_id=1042385]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 86.0
+offset_right = 705.0
+offset_bottom = 508.0
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_muqb5")
+scroll_following = true
+
+[node name="Dossier" parent="." unique_id=230350892 instance=ExtResource("6_sista")]
+layout_mode = 1
+offset_left = 638.0
+offset_top = 300.0
+offset_right = -694.0
+offset_bottom = -235.0
